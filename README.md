@@ -34,7 +34,6 @@ options:
 ## Examples
 
 ````
-
 python3 code_chatgpt.py "print hello world" "hello_world.py"
 python3 code_chatgpt.py "print todays date" "todays_date.py"
 python3 code_chatgpt.py "create a HelloWorld class to print hello world" "HelloWorld.java
@@ -54,12 +53,10 @@ AttributeError: 'NoneType' object has no attribute 'group'
 
 ````
 
-
-
 ## googletrans issue
 
 https://stackoverflow.com/questions/52455774/googletrans-stopped-working-with-error-nonetype-object-has-no-attribute-group#52456197
 
-´´
+```
 pip install googletrans==4.0.0-rc1
-´´
+```
