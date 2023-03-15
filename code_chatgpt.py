@@ -1,15 +1,5 @@
 """
-Automating Python with ChatGPT
-TechWorld with Nana
-
-export OPENAI_API_KEY=
-
-python3 code_chatgpt.py "print hello world" "hello_world.py"
-python3 code_chatgpt.py "print todays date" "todays_date.py"
-python3 code_chatgpt.py "create a HelloWorld class to print hello world" "HelloWorld.java
-
-python3 code_chatgpt.py "extract all html headers from a web page, translate to Danish and save the result as a html file" "extract-translate-headers.py"
-https://www.techworld-with-nana.com/post/is-devops-profession-right-for-me-13-points-to-consider
+Automating Python and other programming languages with ChatGPT
 """
 import argparse
 import os
