@@ -1,4 +1,4 @@
-# python-chatgpt
+# code-chatgpt
 
 Nana python-chatgpt
 
