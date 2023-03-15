@@ -4,7 +4,9 @@ Nana python-chatgpt
 
 Modified so desired programming language can be selected with parameter.
 
-Based on TechWorld with Nana
+Based on 
+TechWorld with Nana
+Python Automation with ChatGPT
 
 ## Usage
 
