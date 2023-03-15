@@ -23,7 +23,7 @@ else:
     PROGRAMMING_LANGUAGE="python"
     DOCSTRING=True
 
-CODE_ONLY = " Provide code only. No comments."
+CODE_ONLY = ". Provide code only. No comments."
 PROMPT = f"Write {PROGRAMMING_LANGUAGE} code for " +  args.prompt + CODE_ONLY
 
 request_headers = {
