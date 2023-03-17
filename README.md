@@ -58,6 +58,6 @@ https://www.techworld-with-nana.com/post/is-devops-profession-right-for-me-13-po
 
 https://stackoverflow.com/questions/52455774/googletrans-stopped-working-with-error-nonetype-object-has-no-attribute-group#52456197
 
-´´
+```
 pip install googletrans==4.0.0-rc1
-´´
+
