@@ -50,6 +50,7 @@ cat files.csv
 python3 code_chatgpt.py "list files in directory of the script file to csv file, one line per file with name, path and size in bytes" "list_files_csv.py"
 
 python3 code_chatgpt.py "extract all html headers from a web page, translate to Danish and save the result into a html file" "extract_translate_headers.py"
+````
 
 https://www.techworld-with-nana.com/post/is-devops-profession-right-for-me-13-points-to-consider
 
