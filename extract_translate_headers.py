@@ -1,7 +1,7 @@
 """
-Write python code for extract all html headers from a web page, 
-translate to Danish and save the result into a html file.
-Provide code only. No comments.
+Write python code for 
+extract all html headers from a web page, 
+translate to Spanish and save the result into an html file. Provide code only. No comments.
 """
 
 
@@ -9,33 +9,37 @@ import requests
 from bs4 import BeautifulSoup
 from googletrans import Translator
 
-# Get the web page
-URL = 'http://strateg.dk/'
-response = requests.get(URL, timeout=None)
+# Get the web page content
+LANG = 'da'
+URL = 'https://www.techworld-with-nana.com/post/a-guide-of-how-to-get-started-in-it-in-2023-top-it-career-paths'
+page = requests.get(URL, timeout=None)
 
-# Parse the HTML content
-soup = BeautifulSoup(response.content, 'html.parser')
+# Parse the HTML
+soup = BeautifulSoup(page.content, 'html.parser')
 
-# Extract all HTML headers
+# Extract all the headers from the page
 headers = soup.find_all(['h1', 'h2', 'h3', 'h4', 'h5', 'h6'])
 
 # Initialize the translator
 translator = Translator()
 
-# Translate the headers to Danish
-danish_headers = []
+# Translate all the headers to Spanish
+spanish_headers = []
 for header in headers:
-    danish_headers.append(translator.translate(header.text, dest='da').text)
-#danish_headers = [translator.translate(str(header.text), dest='da').text for header in headers]
+    translate_result = {
+        "text": translator.translate(header.text, dest=LANG).text,
+        "name": header.name
+    }
+    spanish_headers.append(translate_result)
 
-# Save the result into a HTML file
-with open('danish_headers.html', 'w', encoding='utf-8') as f:
-    f.write('<html>\n')
-    f.write('<head>\n')
-    f.write('<title>Danish Headers</title>\n')
-    f.write('</head>\n')
-    f.write('<body>\n')
-    for header in danish_headers:
-        f.write(f'<h1>{header}</h1>\n')
-    f.write('</body>\n')
-    f.write('</html>\n')
+# Create the HTML file
+html_file = open(f'{LANG}_headers.html', 'w', encoding='UTF-8')
+
+# Write the translated headers to the HTML file
+html_file.write('<html><head><title>Translated Headers</title></head><body>')
+for header in spanish_headers:
+    html_file.write(f'<{header["name"]}>{header["text"]}</{header["name"]}>')
+html_file.write('</body></html>')
+
+# Close the HTML file
+html_file.close()
