@@ -35,6 +35,11 @@ options:
 
 ## Examples
 
+
+
+
+
+
 ````
 python3 code_chatgpt.py "print hello world" "hello_world.py"
 python3 code_chatgpt.py "print todays date" "todays_date.py"
@@ -52,12 +57,19 @@ python3 code_chatgpt.py "list files in directory of the script file to csv file,
 python3 code_chatgpt.py "extract all html headers from a web page, translate to Danish and save the result into a html file" "extract_translate_headers.py"
 ````
 
-https://www.techworld-with-nana.com/post/is-devops-profession-right-for-me-13-points-to-consider
+### Blog post
+
+https://www.techworld-with-nana.com/post/a-guide-of-how-to-get-started-in-it-in-2023-top-it-career-paths
+
+````
+python3 code_chatgpt.py "extract all html headers from a web page, translate to Spanish and save the result into an html file" "extract_translate_headers.py"
+````
 
 ## googletrans issue
 
 https://stackoverflow.com/questions/52455774/googletrans-stopped-working-with-error-nonetype-object-has-no-attribute-group#52456197
 
 ```
-pip install googletrans==4.0.0-rc1
-
+pip3 uninstall googletrans
+pip3 install googletrans==3.1.0a0
+```
