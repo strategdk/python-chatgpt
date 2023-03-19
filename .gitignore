@@ -128,3 +128,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 .vscode/launch.json
+
+# Script to set API key(s)
+set-api-key.sh
