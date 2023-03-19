@@ -4,6 +4,8 @@ Nana python-chatgpt
 
 Modified so desired programming language can be selected with parameter.
 
+Also, for Python script a docstring is added for generated script as wells as some extra prompt instructions to ensure conformity to pylint.
+
 Based on 
 TechWorld with Nana
 Python Automation with ChatGPT
@@ -34,17 +36,15 @@ options:
 ````
 
 ## Examples
-
-
-
-
-
-
 ````
 python3 code_chatgpt.py "print hello world" "hello_world.py"
 python3 code_chatgpt.py "print todays date" "todays_date.py"
+
 python3 code_chatgpt.py "print todays date" "todays-date.groovy" -pl Groovy
+
 python3 code_chatgpt.py "create a HelloWorld class to print hello world" "HelloWorld.java" -pl Java
+
+python3 code_chatgpt.py "set environment variable in full script" "set-api-key.sh" -pl "schell script"
 
 python3 code_chatgpt.py "list all files in directory to a csv file with one line per file displaying name, path and size in bytes. use os.walk." "new_directory01.py"
 
@@ -64,6 +64,11 @@ https://www.techworld-with-nana.com/post/a-guide-of-how-to-get-started-in-it-in-
 ````
 python3 code_chatgpt.py "extract all html headers from a web page, translate to Spanish and save the result into an html file" "extract_translate_headers.py"
 ````
+
+### Clean downloads
+```
+python3 code_chatgpt.py "go through files in Downloads folder, check their dates and if they are older than 30 days, move them to folder called to_delete" "clean_downloads.py"
+```
 
 ## googletrans issue
 
